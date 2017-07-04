@@ -34,7 +34,7 @@ tf.inputView = zxKB;
 ####  alphabetic keyboard:
 
 ```objective-c
-// 数字键盘
+// 字母键盘
 KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:LetterKeyboard delegateTarget:self];
 // 设置为输入键盘, tf 是 UITextField 对象
 tf.inputView = zxKB;
@@ -43,7 +43,7 @@ tf.inputView = zxKB;
 ####  symbol keyboard:
 
 ```objective-c
-// 数字键盘
+// 符号键盘
 KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:SymbolKeyboard delegateTarget:self];
 // 设置为输入键盘, tf 是 UITextField 对象
 tf.inputView = zxKB;
@@ -52,7 +52,7 @@ tf.inputView = zxKB;
 ####  password keyboard:
 
 ```objective-c
-// 数字键盘
+// 密码键盘
 KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:PassWordKeyboard delegateTarget:self];
 // 设置为输入键盘, tf 是 UITextField 对象
 tf.inputView = zxKB;
