@@ -11,7 +11,8 @@ KRKeyboard: A multi-function keyboard.
 
 # Effects
 
-[![效果](https://github.com/DengKaiRong/KRPopupView/raw/master/effect.gif)](https://github.com/DengKaiRong/KRPopupView/blob/master/effect.gif)
+[![效果](https://github.com/DengKaiRong/KRKeyboard/blob/master/krkeyboard1.gif)](https://github.com/DengKaiRong/KRKeyboard/blob/master/krkeyboard1.gif)
+[![效果](https://github.com/DengKaiRong/KRKeyboard/blob/master/krkeyboard2.gif)](https://github.com/DengKaiRong/KRKeyboard/blob/master/krkeyboard2.gif)
 
 # Use
 
