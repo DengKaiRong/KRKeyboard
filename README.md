@@ -20,6 +20,7 @@ KRKeyboard: A multi-function keyboard.
 > 2. Import `KRKeyboard.h`
 > 3. init KRKeyboard
 > 4. implementation protocol
+> 5. run project :)
 
 ####  numeric keyboard:
 
@@ -57,6 +58,8 @@ KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:PassWordKeyboard delegateT
 tf.inputView = zxKB;
 ```
 
+# Delegate、Config、Setting:
+
 #### KRKeyboardDelegate:
 
 ```objective-c
@@ -71,6 +74,29 @@ tf.inputView = zxKB;
 - (void)pressKey:(NSString *)key keyType:(KRKeyType)keyType keyboardType:(KRKeyboardType)keyboardType content:(NSString *)content;
 ```
 
+#### Config:
+
+on `Define.h` file
+
+```objective-c
+//------  键盘配置  ------//
+
+// 字体及大小
+#define KRFONTNAME @"Helvetica-light"
+
+// 键盘高度
+#define KRKEYBOARDHEIGHT KSCREEN_HEIGHT * 0.4
+
+// 键盘顶部logo视图的高度
+#define KRLOGOVIEW_HEIGHT 40
+```
+
+#### Setting:
+
+```objective-c
+[zxKB setClickSoundEnable:NO];  // 是否开启键盘声音
+```
+
 #### any else. see demo.
 
 # Other
@@ -78,9 +104,7 @@ tf.inputView = zxKB;
 #### any issue. Please contact me.
 
  ```    c
-  Q  Q: 448150220
-
+   Q  Q: 448150220
 Wechat: dengsir058
-
 E-mail: dengsir@goldenbeetech.com
  ```
