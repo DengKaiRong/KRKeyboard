@@ -27,6 +27,9 @@
 /** 按钮数组 **/
 @property (nonatomic, strong) NSMutableArray<UIButton *> * btnArray;
 
+/** 键盘父视图 */
+@property (nonatomic, strong) UIView * btSuperView;
+
 @end
 
 @implementation KRLetterKeyboard
@@ -110,6 +113,7 @@
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = touches.anyObject;
+    if (touch.view != _btSuperView) return;
     CGPoint location = [touch locationInView:touch.view];
     UIButton *btn = [self keyboardButtonWithLocation:location];
     
@@ -169,6 +173,7 @@
     
     // 添加按钮
     [self creatButtons];
+
 }
 
 #pragma mark - 初始化数据
@@ -184,10 +189,10 @@
     NSArray * letterArr = [str componentsSeparatedByString:@" "];
     
     // 添加按钮父视图
-    UIView * btSuperView = [UIView new];
-    [self addSubview:btSuperView];
+    _btSuperView = [UIView new];
+    [self addSubview:_btSuperView];
     
-    [btSuperView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_btSuperView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_offset(0);
         make.top.mas_offset(KRLOGOVIEW_HEIGHT);
     }];
@@ -201,7 +206,7 @@
         [bt setTitle:letterArr[i] forState:UIControlStateNormal];
         [bt setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         bt.titleLabel.font = KFONT(KRFONTNAME,22);
-        [btSuperView addSubview:bt];
+        [_btSuperView addSubview:bt];
         bt.enabled = NO;
         
         switch (i) {
@@ -248,7 +253,7 @@
         [_btnArray addObject:bt];
     }
     
-    [btSuperView.subviews mas_distributeSudokuViewsWithFixedLineSpacing:5 fixedInteritemSpacing:2 warpCount:10 topSpacing:8 bottomSpacing:8 leadSpacing:8 tailSpacing:8];
+    [_btSuperView.subviews mas_distributeSudokuViewsWithFixedLineSpacing:5 fixedInteritemSpacing:2 warpCount:10 topSpacing:8 bottomSpacing:8 leadSpacing:8 tailSpacing:8];
     
 }
 

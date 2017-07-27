@@ -34,16 +34,16 @@
     //------  实例化键盘  ------//
     
     // 交易密码键盘
-    KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:PassWordKeyboard delegateTarget:self];
+//    KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:PassWordKeyboard delegateTarget:self];
     
     // 字母键盘
-    //    KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:LetterKeyboard delegateTarget:self];
+//        KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:LetterKeyboard delegateTarget:self];
     
     // 数字键盘
     //    KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:NumberKeyboard delegateTarget:self];
     
     // 符号键盘
-    // KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:SymbolKeyboard delegateTarget:self];
+     KRKeyboard * zxKB = [KRKeyboard creatWithKeyboardType:SymbolKeyboard delegateTarget:self];
     
     // [zxKB setClickSoundEnable:NO];  // 是否开启键盘声音
     

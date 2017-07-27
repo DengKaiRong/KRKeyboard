@@ -64,6 +64,7 @@
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = touches.anyObject;
+    if (touch.view != topSuperView) return;
     CGPoint location = [touch locationInView:touch.view];
     UIButton *btn = [self keyboardButtonWithLocation:location];
     
